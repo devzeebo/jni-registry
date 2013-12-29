@@ -14,100 +14,68 @@
 ** REDISTRIBUTION OF THIS SOFTWARE. 
 ** 
 */
-
 package com.ice.jni.registry;
 
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-
 
 /**
  * The RegBinaryValue class represents a binary value in the
  * registry (REG_BINARY).
  *
  * @version 3.1.3
- *
  * @see com.ice.jni.registry.Registry
  * @see com.ice.jni.registry.RegistryKey
  */
+public class RegBinaryValue extends RegistryValue {
 
-public class
-RegBinaryValue extends RegistryValue
-	{
-	byte[]		data;
-	int			dataLen;
+	byte[] data;
+	int dataLen;
 
-
-	public
-	RegBinaryValue( RegistryKey key, String name )
-		{
-		super( key, name, RegistryValue.REG_BINARY );
+	public RegBinaryValue(RegistryKey key, String name) {
+		super(key, name, RegistryValue.REG_BINARY);
 		this.data = null;
 		this.dataLen = 0;
-		}
-
-	public
-	RegBinaryValue( RegistryKey key, String name, int type )
-		{
-		super( key, name, type );
-		this.data = null;
-		this.dataLen = 0;
-		}
-
-	public
-	RegBinaryValue( RegistryKey key, String name, byte[] data )
-		{
-		super( key, name, RegistryValue.REG_BINARY );
-		this.setData( data );
-		}
-
-	public byte[]
-	getData()
-		{
-		return this.data;
-		}
-
-	public int
-	getLength()
-		{
-		return this.dataLen;
-		}
-
-	public void
-	setData( byte[] data )
-		{
-		this.data = data;
-		this.dataLen = data.length;
-		}
-
-	public byte[]
-	getByteData()
-		{
-		return this.data;
-		}
-
-	public int
-	getByteLength()
-		{
-		return this.dataLen;
-		}
-
-	public void
-	setByteData( byte[] data )
-		{
-		this.data = data;
-		this.dataLen = data.length;
-		}
-
-	public void
-	export( PrintWriter out )
-		{
-		out.println( "\"" + this.getName() + "\"=hex:\\" );
-		RegistryValue.exportHexData( out, this.data );
-		}
-
 	}
 
+	public RegBinaryValue(RegistryKey key, String name, int type) {
+		super(key, name, type);
+		this.data = null;
+		this.dataLen = 0;
+	}
 
+	public RegBinaryValue(RegistryKey key, String name, byte[] data) {
+		super(key, name, RegistryValue.REG_BINARY);
+		this.setData(data);
+	}
 
+	public byte[] getData() {
+		return this.data;
+	}
 
+	public int getLength() {
+		return this.dataLen;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
+		this.dataLen = data.length;
+	}
+
+	public byte[] getByteData() {
+		return this.data;
+	}
+
+	public int getByteLength() {
+		return this.dataLen;
+	}
+
+	public void setByteData(byte[] data) {
+		this.data = data;
+		this.dataLen = data.length;
+	}
+
+	public void export(PrintWriter out) {
+		out.println("\"" + this.getName() + "\"=hex:\\");
+		RegistryValue.exportHexData(out, this.data);
+	}
+}

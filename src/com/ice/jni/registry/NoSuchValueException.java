@@ -20,38 +20,27 @@ package com.ice.jni.registry;
 /**
  * This exception is used to indicate that no such key exists in the registry.
  *
- * @version 3.1.3
- *
- * @version $Revision: 1.1.1.1 $
  * @author Timothy Gerard Endres,
- *    <a href="mailto:time@ice.com">time@ice.com</a>.
+ *         <a href="mailto:time@ice.com">time@ice.com</a>.
+ * @version $Revision: 1.1.1.1 $
  */
 
-public class
-NoSuchValueException extends RegistryException
-	{
-	static public final String	RCS_ID = "$Id: NoSuchValueException.java,v 1.1.1.1 1998/02/22 00:37:22 time Exp $";
-	static public final String	RCS_REV = "$Revision: 1.1.1.1 $";
-	static public final String	RCS_NAME = "$Name:  $";
+public class NoSuchValueException extends RegistryException {
 
-	public
-	NoSuchValueException()
-		{
+	static public final String RCS_ID = "$Id: NoSuchValueException.java,v 1.1.1.1 1998/02/22 00:37:22 time Exp $";
+	static public final String RCS_REV = "$Revision: 1.1.1.1 $";
+	static public final String RCS_NAME = "$Name:  $";
+
+	public NoSuchValueException() {
 		super();
-		}
-
-	public
-	NoSuchValueException( String msg )
-		{
-		super( msg, Registry.ERROR_FILE_NOT_FOUND );
-		}
-
-	public
-	NoSuchValueException( String msg, int regErr )
-		{
-		super( msg, regErr );
-		}
-
 	}
 
+	public NoSuchValueException(String msg) {
+		super(msg, Registry.ERROR_FILE_NOT_FOUND);
+	}
 
+	public NoSuchValueException(String msg, int regErr) {
+		super(msg, regErr);
+	}
+
+}
