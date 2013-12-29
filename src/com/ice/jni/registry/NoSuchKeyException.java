@@ -26,12 +26,7 @@ package com.ice.jni.registry;
  */
 public class NoSuchKeyException extends RegistryException {
 
-	static public final String RCS_ID = "$Id: NoSuchKeyException.java,v 1.1.1.1 1998/02/22 00:37:22 time Exp $";
-	static public final String RCS_REV = "$Revision: 1.1.1.1 $";
-	static public final String RCS_NAME = "$Name:  $";
-
 	public NoSuchKeyException() {
-		super();
 	}
 
 	public NoSuchKeyException(String msg) {

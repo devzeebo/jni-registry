@@ -33,8 +33,8 @@ import java.io.PrintWriter;
  * @see com.ice.jni.registry.RegistryKey
  */
 
-abstract public class
-		RegistryValue {
+abstract public class RegistryValue {
+
 	public static final int REG_NONE = 0;
 	public static final int REG_SZ = 1;
 	public static final int REG_EXPAND_SZ = 2;
@@ -81,34 +81,28 @@ abstract public class
 		this.type = type;
 	}
 
-	public RegistryKey
-	getKey() {
+	public RegistryKey getKey() {
 		return this.key;
 	}
 
-	public String
-	getName() {
+	public String getName() {
 		return this.name;
 	}
 
-	public int
-	getType() {
+	public int getType() {
 		return this.type;
 	}
 
-	public void
-	export(PrintWriter out) {
+	public void export(PrintWriter out) {
 		out.print("\"" + this.getName() + "\"=");
 		out.println("\"ERROR called RegistryValue.export()!\"");
 	}
 
-	public String
-	toString() {
+	public String toString() {
 		return "[type=" + this.type + ",name=" + this.name + "]";
 	}
 
-	public static void
-	exportHexData(PrintWriter out, byte[] data) {
+	public static void exportHexData(PrintWriter out, byte[] data) {
 		int i, cnt;
 		char ch1, ch2;
 		int len = data.length;
@@ -134,16 +128,12 @@ abstract public class
 			}
 		}
 
-		out.println("");
+		out.println();
 	}
 
-	abstract public byte[]
-	getByteData();
+	abstract public byte[] getByteData();
 
-	abstract public int
-	getByteLength();
+	abstract public int getByteLength();
 
-	abstract public void
-	setByteData(byte[] data);
-
+	abstract public void setByteData(byte[] data);
 }

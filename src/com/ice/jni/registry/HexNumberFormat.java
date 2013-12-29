@@ -32,9 +32,6 @@ import java.text.ParsePosition;
  */
 public class HexNumberFormat extends Format {
 
-	static public final String RCS_ID = "$Id: HexNumberFormat.java,v 1.1 2000/05/20 17:10:15 time Exp $";
-	static public final String RCS_REV = "$Revision: 1.1 $";
-
 	private static char[] lowChars;
 	private static char[] uprChars;
 
@@ -75,7 +72,6 @@ public class HexNumberFormat extends Format {
 	}
 
 	public HexNumberFormat(String pattern) {
-		super();
 		this.pattern = pattern;
 		this.count = pattern.length();
 		this.hexChars = (pattern.charAt(0) == 'X' ? HexNumberFormat.uprChars : HexNumberFormat.lowChars);

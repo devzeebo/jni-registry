@@ -27,12 +27,7 @@ package com.ice.jni.registry;
 
 public class NoSuchValueException extends RegistryException {
 
-	static public final String RCS_ID = "$Id: NoSuchValueException.java,v 1.1.1.1 1998/02/22 00:37:22 time Exp $";
-	static public final String RCS_REV = "$Revision: 1.1.1.1 $";
-	static public final String RCS_NAME = "$Name:  $";
-
 	public NoSuchValueException() {
-		super();
 	}
 
 	public NoSuchValueException(String msg) {

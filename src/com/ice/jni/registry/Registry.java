@@ -238,7 +238,7 @@ public class Registry {
 		PrintWriter out = new PrintWriter(new FileWriter(pathName));
 
 		out.println("REGEDIT4");
-		out.println("");
+		out.println();
 
 		key.export(out, descend);
 

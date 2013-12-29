@@ -42,8 +42,7 @@ import java.util.NoSuchElementException;
  */
 
 
-public class
-		RegistryKey {
+public class RegistryKey {
 	/**
 	 * Constants used to determine the access level for
 	 * newly opened keys.
@@ -551,7 +550,7 @@ public class
 			value.export(out);
 		}
 
-		out.println("");
+		out.println();
 
 		if (descend) {
 			enumeration = this.keyElements();
